@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+
+  postgres:
+    image: postgres:15
+    container_name: pg_container
+    restart: always
+    environment:
+      POSTGRES_USER: mansoor
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: crud_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    container_name: adminer_container
+    restart: always
+    ports:
+      - 8080:8080
+
+  php:
+    build: .
+    container_name: php_container
+    ports:
+      - 8000:80
+    volumes:
+      - ./app:/var/www/html
+    depends_on:
+      - postgres
+
+volumes:
+  pgdata:

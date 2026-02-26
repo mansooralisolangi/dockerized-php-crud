@@ -1,0 +1,17 @@
+# Composer dependencies
+/vendor/
+
+# Environment files
+.env
+
+# Docker override / local config
+docker-compose.override.yml
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Optional PHPstorm / VSCode files
+.idea/
+.vscode/
