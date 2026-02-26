@@ -15,7 +15,7 @@ Dockerized environment for easy setup
 📁 Project Structure
 my-crud-app/
 │
-├─ apa.php                # Main PHP CRUD API
+├─ ap.php                # Main PHP CRUD API
 ├─ index.php           # PostgreSQL connection and php code
 ├─ Dockerfile             # PHP container
 ├─ docker-compose.yml     # Docker services (PHP + PostgreSQL + Adminer)
@@ -33,8 +33,7 @@ Composer (for local dependency management)
 
 Clone the repository:
 
-git clone https://github.com/<username>/<repo-name>.git
-cd my-crud-app
+git clone [https://github.com/<username>/<repo-name>.git](https://github.com/mansooralisolangi/dockerized-php-crud)
 
 Create .env file (copy from .env.example if provided) and set your database credentials:
 
